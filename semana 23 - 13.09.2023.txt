@@ -1,0 +1,69 @@
+#Criação da classe Carro:
+
+class Carro:
+    
+#Criação dos atributos (modelo, cor, valor, ano):
+
+    def __init__(self, modelo, cor, valor, ano):
+        """
+        Inicializa um novo objeto Carro.
+        
+        :param modelo: O modelo do carro (ex: 'Corolla').
+        :param cor: A cor do carro (ex: 'preto').
+        :param valor: O valor do carro (ex: 50000.0).
+        :param ano: O ano de fabricação do carro (ex: 2020).
+        """
+        self.modelo = modelo  # Criação do atributo modelo
+        self.cor = cor        # Criação do atributo cor
+        self.valor = valor    # Criação do atributo valor
+        self.ano = ano        # Criação do atributo ano
+        
+#Criação do método valor_com_desconto:
+
+    def valor_com_desconto(self, percentual_desconto):
+        """
+        Calcula o valor do carro com um desconto aplicado.
+        
+        :param percentual_desconto: O percentual de desconto (ex: 10 para 10%).
+        :return: O valor do carro após aplicar o desconto.
+        """
+        desconto = (percentual_desconto / 100) * self.valor
+        valor_final = self.valor - desconto
+        return valor_final
+    
+#Criação do método valor_parcelado:
+
+    def valor_parcelado(self, num_parcelas):
+        """
+        Calcula o valor da parcela de um carro, dado o número de parcelas.
+        
+        :param num_parcelas: O número de parcelas (ex: 12).
+        :return: O valor de cada parcela.
+        """
+        if num_parcelas <= 0:
+            raise ValueError("O número de parcelas deve ser maior que zero.")
+        parcela = self.valor / num_parcelas
+        return parcela
+
+# Criação de 3 objetos da classe Carro
+
+carro1 = Carro("Corolla", "preto", 50000.0, 2020)  # Criação do objeto carro1
+carro2 = Carro("Civic", "branco", 55000.0, 2021)   # Criação do objeto carro2
+carro3 = Carro("Fusca", "amarelo", 25000.0, 2018)  # Criação do objeto carro3
+
+# Utilização dos métodos dos objetos
+
+print("Detalhes do Carro 1:")
+print(f"Modelo: {carro1.modelo}")
+print(f"Valor com 10% de desconto: R${carro1.valor_com_desconto(10):.2f}")
+print(f"Valor parcelado em 12 vezes: R${carro1.valor_parcelado(12):.2f}")
+
+print("\nDetalhes do Carro 2:")
+print(f"Modelo: {carro2.modelo}")
+print(f"Valor com 15% de desconto: R${carro2.valor_com_desconto(15):.2f}")
+print(f"Valor parcelado em 24 vezes: R${carro2.valor_parcelado(24):.2f}")
+
+print("\nDetalhes do Carro 3:")
+print(f"Modelo: {carro3.modelo}")
+print(f"Valor com 5% de desconto: R${carro3.valor_com_desconto(5):.2f}")
+print(f"Valor parcelado em 6 vezes: R${carro3.valor_parcelado(6):.2f}")
