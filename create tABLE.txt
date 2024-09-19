@@ -1,0 +1,10 @@
+REATE TABLE tb_cargo
+(id int primary key,cargo VARCHAR2(30))
+INSERT INTO Tb_cargo(id,cargo) VALUES (1,"contador")
+
+CREATE TABLE ib_funcionarios 
+(id int primary key,nome varchar(30),cargo iNT (3),departamento varchar (20))
+
+INSERT INTO ib_funcionarios(id,nome,cargo,departamento) VALUES (10,"estefany","9","logista")
+SELECT * FROM ib_funcionarios
+ELECT * FROM ib_funcionarios where id = 3
