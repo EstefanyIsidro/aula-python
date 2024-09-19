@@ -1,0 +1,72 @@
+#curso DS  semana 23 jetos conhecendo oop
+#criando  a class
+class ProdutoEletronico:
+    def ___init__(self, nome, marca, preco):
+        self.nome= Nome 
+        self.marca =  marca 
+        self.preco = preco 
+ print(prod2)
+prod2.nome = "TC-LCD"
+print(prod2.nome
+
+=============================================
+# curso DS  semana 23 jetos conhecendo oop
+# criando  a class
+class Produto:
+    def __init__(self, nome, marca, preco):
+        self.nome = nome
+        self.marca = marca
+        self.preco = preco
+
+
+prod2 = Produto("smartTV", "Philips", 4500)
+#print(prod2)
+#prod2.nome = "TC-LCD"
+print(prod2.nome)
+prodx = Produto("notebook","sansung",3600)
+print(prodx.nome,prodx.preco)
+==============================================>
+# curso DS  semana 23 jetos conhecendo oop
+# criando  a class
+class Produto:
+    def __init__(self, nome, marca, preco):
+        self.nome = nome
+        self.marca = marca
+        self.preco = preco
+    def exibir_10vezes(self):
+        n = 1
+        while n <= 10 :
+            print("Nome - ",n," ",self.nome)
+            n+=1
+prod2 = Produto("smartTV", "Philips", 4500)
+#print(prod2)
+#prod2.nome = "TC-LCD"
+print(prod2.nome)
+prodx = Produto("notebook","sansung",3600)
+print(prodx.nome,prodx.preco)
+prodx.exibir_10vezes()
+===============================================>
+# curso DS  semana 23 jetos conhecendo oop
+# criando  a class
+class Produto:
+    def __init__(self, nome, marca, preco):
+        self.nome = nome
+        self.marca = marca
+        self.preco = preco
+    def exibir_10vezes(self):
+        n = 1
+        while n <= 10 :
+            print("Nome - ",n," ",self.nome)
+            n+=1
+    def desconto_10(self):
+        print(f"Produto: {self.nome},Valor"
+              f"Produto: {self.preco},"
+              f"Desconto 10% : {self.preco*.10}")
+
+prod2 = Produto("smartTV", "Philips", 4500)
+#print(prod2)
+#prod2.nome = "TC-LCD"
+print(prod2.nome)
+prodx = Produto("notebook","sansung",3600)
+print(prodx.nome,prodx.preco)
+prodx.exibir_10vezes()
