@@ -1,0 +1,78 @@
+class Carro:
+    """
+    Classe que representa um carro.
+    
+    Atributos:
+    - codigo: Código identificador do carro
+    - cor: Cor do carro
+    - fabricante: Fabricante do carro
+    - valor: Valor do carro
+    - modelo: Modelo do carro
+    - ano: Ano de fabricação do carro
+    """
+    
+    def __init__(self, codigo, cor, fabricante, valor, modelo, ano):
+        """Inicializa os atributos do carro."""
+        self.codigo = codigo
+        self.cor = cor
+        self.fabricante = fabricante
+        self.valor = valor
+        self.modelo = modelo
+        self.ano = ano
+
+    def calcular_parcelas(self, quantidade_parcelas):
+        """
+        Método que calcula o valor de cada parcela.
+        
+        Parâmetros:
+        - quantidade_parcelas: Número de parcelas para o cálculo
+        
+        Retorna:
+        - O valor de cada parcela
+        """
+        if quantidade_parcelas <= 0:
+            return 0
+        return self.valor / quantidade_parcelas
+
+    def exibir_dados(self):
+        """Método que exibe os dados do carro."""
+        print(f"Código: {self.codigo}")
+        print(f"Cor: {self.cor}")
+        print(f"Fabricante: {self.fabricante}")
+        print(f"Valor: R$ {self.valor:.2f}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Ano: {self.ano}")
+
+# Função principal para interação com o usuário
+def main():
+    # Solicitar dados do usuário
+    codigo = input("Digite o código do carro: ")
+    cor = input("Digite a cor do carro: ")
+    fabricante = input("Digite o fabricante do carro: ")
+    valor = float(input("Digite o valor do carro: R$ "))
+    modelo = input("Digite o modelo do carro: ")
+    ano = input("Digite o ano de fabricação do carro: ")
+
+    # Criar um objeto Carro
+    carro = Carro(codigo, cor, fabricante, valor, modelo, ano)
+
+    # Exibir os dados do carro
+    carro.exibir_dados()
+
+    # Calcular parcelas
+    parcelas = int(input("Digite a quantidade de parcelas: "))
+    valor_parcela = carro.calcular_parcelas(parcelas)
+    
+    print(f"Valor de cada parcela: R$ {valor_parcela:.2f}")
+
+# Executar a função principal
+if __name__ == "__main__":
+    main()
+
+=======================================================================================================
+Explicação do Código:
+Classe: A classe Carro é uma estrutura que define a "forma" dos objetos do tipo carro.
+Atributos: Os atributos (como codigo, cor, fabricante, etc.) representam as características do carro.
+Métodos: Os métodos (calcular_parcelas e exibir_dados) definem as ações que os objetos da classe podem realizar.
+Objetos: No programa, criamos um objeto carro que é uma instância da classe ,
+preenchendo seus atributos com os dados fornecidos pelo usuário.
