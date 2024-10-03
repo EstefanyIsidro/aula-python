@@ -1,0 +1,33 @@
+#curso python - colegio irene
+#programa calcular media simples
+#professor orlando
+#autor:Estefany
+#data=03.10.2024
+#versao 01
+#pedindo o nome do aluno
+nome=input("digite seu nome:")
+#pedindo a solicitacao das notas
+nota1 =float(input("digite sua nota1:"))
+nota2=float(input("digite sua nota2:"))
+nota3=float(input("digite sua nota3:"))
+nota4=float(input("digite sua nota4:"))
+ #a media das quatro notas 
+media=(nota1+nota2+nota3+nota4)/4
+print(("sua media:"),media)
+#sua indicacao de acordo com a sua media 
+
+if media  >= 6:
+    print(f"o resultado e {media:.2f},voce foi Aprovado!")
+    #{media:.2f} ,():.2f )=indica a formatacao;
+    # (:)=indica a iniciacao;
+    # (.2)=indica que queremos duas casas decimais ;
+    # (f)=significa a formatacao de um ponto fluante [float].
+elif media >=3:
+    print(f"o rsultado e {media:.2f},voce ficara de recuperacao!") 
+    
+else:
+    print(f"A media e {media:.2f},voce foi reprovado pela media 
+          baixa!")
+
+
+
