@@ -1,0 +1,53 @@
+def calcular_inss(salario):
+    if salario <= 1212.00: 
+ #if = É utilizado para verificar uma condição e executar um bloco de código se essa condição for verdadeira
+        return salario *0.075
+    elif salario <= 2427.35:
+        #elif = permite verificar múltiplas condições sequencialmente.
+        return salario * 0.09
+    elif salario <=3641.03:
+        return salario * 0.12
+    elif salario <=7087.22:
+        return salario * 0.14
+    else:
+ #else= é utilizado para executar um bloco de código, caso o resultado da expressão informada na instrução if seja falso
+        return 7087.22 *0.14
+    
+funcionarios =[]
+while  True:
+    #true = verdadeiro    
+#while = enquanto 
+#while true = enquato for verdadeiro
+    nome = input ("digite o nome do funcionario(ou 'sair' para finalizar: )")
+    if nome.lower() == 'sair':
+    #lower ()=Coloca toda a string em minúscula.
+      break    
+    carga_horaria = float(input("Digite a carga horaria :"))
+#float=este tipo permite guardar dados numéricos com parte decimal (o que vem depois da vírgula)
+valor_hora  = float (input("digite seu valor da hora :"))
+funcionarios.append((nome,carga_horaria,valor_hora))
+print(f"/nTotal de funcionarios cadastrados ;{len( funcionarios )}")
+#len=retorna o número de caracteres no string (ou seja, o seu comprimento).
+while True :
+    nome_busca =  input ("/nDigite o nome do funcionario para calcular o salario com 'sair'  para (finalizar):")
+    if nome_busca.lower()=='sair':
+        break
+    #break = e como "quebra " o loop 
+    for funcionarios in funcionarios:
+        if funcionarios [0].lower()== nome_busca .lower():
+            salario_bruto = funcionarios[1] * funcionarios[2]
+            inss= calcular_inss(salario_bruto)
+            salario_liquido = salario_bruto - inss
+            print(f"salario bruto :R$ (salrio_bruto:.2f'INSS')")
+            print(f"INSS:R$(inss:.2f)")
+            print(f"salario_liquido:R$(salario_liquido:.2f)")
+            break
+        else:
+            print("Funcionarios nao cadastrados:")
+        
+    
+
+
+    
+    
+    
