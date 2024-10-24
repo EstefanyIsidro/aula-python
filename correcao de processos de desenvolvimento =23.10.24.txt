@@ -1,0 +1,47 @@
+#escola=E.E.Irene Branco da Silva
+#professor= Orlando
+#aluna=Estefany
+#aula=processos de desenvolvimento de sistemas 
+
+import tkinter as tk
+def calcular_frete(peso_total):
+#calcular o frete com base no peso total.
+    if peso_total<=100:
+        return 9.00
+    elif peso_total<= 400:
+        return 13.00
+    elif peso_total <=600:
+        return 18.00
+    else:
+        return 30.00
+
+def calcular_e_mostrar():
+
+#solicitar os dados do usuario
+
+  valor_unitario = float(input("Digite seu valor unitario:"))
+  Quantidade = int(input("Digite a Quantiade"))
+  peso_por_unidade = float(input("Digite o valor peso por unidade (em gramas) :"))
+
+#calcular peso total
+  peso_total=Quantidade * peso_por_unidade
+# calcular o frete
+  frete = calcular_frete(peso_total)
+#exibir resultado
+  print(f"o valor do frete e:R${frete:.2f}")
+  resultado_label.config(text=f"o valor do frete e:R${frete:.2f}")
+#criar janela principal
+Janela=tk.Tk()
+Janela.title("Calculo do Frete")
+
+# criar label ,campos de entrada e botao
+
+resultado_label = tk.Label(Janela,text="")
+resultado_label.pack()
+
+botao_calcular=tk.Button(Janela,text="Calcular",command=calcular_e_mostrar)
+
+botao_calcular.pack()
+
+#iniciar o loop da interface grafica
+Janela.mainloop()
