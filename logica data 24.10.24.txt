@@ -1,0 +1,32 @@
+#data = 24.10.2024
+#professor=Orlando
+#aluna= Estefany
+#atividade de Logica dd programacao
+#escola=E.E.irene Branco da Silva
+#programa estoque com frete
+#variaveis de memoria
+vcont='s'
+vproduto= ''
+vquantidade=0
+vvalor=0.0
+vpeso=0.0
+#criando lista
+Lproduto =[]
+Lvalor = []
+Lquantidade=[]
+Lpeso=[]
+print("sistema de vendas")
+while vcont == 's':
+    
+    #== e como pergunta
+    vproduto = input("Digite o produto:")
+    vvalor = float(input("valor:"))
+    vquantidade=int(input("Quantidade"))
+    vpeso = float(input("Peso:"))
+    Lproduto.append(vproduto)
+    Lvalor.append(vvalor)
+    Lquantidade.append(vquantidade)
+    Lpeso.append(vpeso)
+    vcont=input("Deseja continuar<s/n>")
+print('--------------------------------------------')
+print('--------------calculando peso---------------')
